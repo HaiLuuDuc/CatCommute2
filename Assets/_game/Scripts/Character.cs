@@ -21,12 +21,14 @@ public class Character : MathObject
     public CapsuleCollider capsuleCollider;
 
     public static float patrolSpeed = 1.6f;
-    public static float jumpForce = 300f;
+    public static float jumpForce = 600f;
 
 
     [Header("Anim : ")]
     public Animator anim;
     public string currentAnim;
+
+    public bool isJump = false;
 
 
     #region STATE MACHINE
@@ -191,16 +193,29 @@ public class Character : MathObject
                 LevelManager.ins.currentLevel.arena.PutCharactersInFightPos();
             }
 
+            if (other.CompareTag("deathzone") && !MovementController.ins.isBlockControl)
+            {
+                Debug.Log("deathzone");
+                CameraFollow.ins.target = null;
+                MovementController.ins.isBlockControl = true;
+                foreach (Character character in Player.ins.characterList)
+                {
+                    character.SwitchState(idleState);
+                }
+                Player.ins.isAlive = false;
+                Timer.Do(UIManager.ins, () => {
+                    UIManager.ins.OpenUI<Lose>();
+                }, 1f);
+            }
+
         }
 
         if (other.CompareTag("luoicua"))
         {
             if (isRoot)
             {
-                foreach(Character character in Player.ins.characterList)
-                {
-                    character.SwitchState(character.dieState);
-                }
+                Player.ins.targetScore = Player.ins.currentScore = 0;
+                UpgradeManager.ins.characterRootModel.gameObject.SetActive(false);
             }
             else
             {
@@ -217,32 +232,45 @@ public class Character : MathObject
             }
         }
 
-        if (other.CompareTag("jump"))
+        if (other.CompareTag("jump") && isJump == false && Player.ins.isAlive)
         {
             Debug.Log(this.gameObject.name + " jump");
             rb.velocity = Vector3.zero;
             rb.AddForce(new Vector3(0, jumpForce, 0));
+            isJump = true;
         }
+
+        if (other.CompareTag("riu"))
+        {
+            if (isRoot)
+            {
+                Player.ins.targetScore = Player.ins.currentScore = 0;
+            }
+            else
+            {
+                int idx = Player.ins.characterList.IndexOf(this);
+                if (idx < Player.ins.characterList.Count - 1) // k phải thằng cuối
+                {
+                    Player.ins.characterList[idx + 1].frontCharacter = this.frontCharacter;// bàn giao frontCharacter
+                }
+
+                Player.ins.characterList.Remove(this);
+                this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
+                this.gameObject.SetActive(false);
+
+            }
+        }
+
+        
 
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (isRoot)
-        {
-            if (other.CompareTag("winzone") && !MovementController.ins.isBlockControl)
-            {
-                CameraFollow.ins.target = null;
-                MovementController.ins.isBlockControl = true;
-                foreach (Character character in Player.ins.characterList)
-                {
-                    character.SwitchState(idleState);
-                }
 
-                Timer.Do(UIManager.ins, () => {
-                    UIManager.ins.OpenUI<Lose>();
-                } , 1f);
-            }
+        if (other.CompareTag("jump"))
+        {
+            isJump = false;
         }
     }
 

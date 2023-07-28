@@ -9,6 +9,8 @@ public class ScorePopUp : Singleton<ScorePopUp>
 {
     public TextMeshProUGUI scoreText;
     Coroutine showCoroutine = null;
+    Tween bigger = null;
+    Tween smaller = null;
 
     private void Start()
     {
@@ -23,7 +25,7 @@ public class ScorePopUp : Singleton<ScorePopUp>
             showCoroutine = null;
         }
         Hide();
-        DOTween.KillAll();
+        DOTween.Kill(transform);
         scoreText.color = textColor;
         if (value>0)
         {
@@ -41,14 +43,14 @@ public class ScorePopUp : Singleton<ScorePopUp>
     public IEnumerator ShowCoroutine()
     {
         this.transform.localScale = Vector3.one * 0.3f;
-        this.transform
+        bigger = this.transform
             .DOScale(Vector3.one, .2f)
             .SetEase(Ease.OutBack)
             .SetLoops(0, LoopType.Yoyo);
 
         yield return new WaitForSeconds(0.5f);
              
-        this.transform
+        smaller =  this.transform
             .DOScale(Vector3.one * 0.3f, .2f)
             .SetEase(Ease.InBack)
             .SetLoops(0, LoopType.Yoyo)

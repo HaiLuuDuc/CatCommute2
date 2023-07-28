@@ -99,6 +99,7 @@ public class Player : Singleton<Player>
     public void Run()
     {
         transform.position = Vector3.MoveTowards(transform.position, targetRun.position, runSpeed * Time.deltaTime);
+        //characterRoot.rb.velocity = Vector3.forward * runSpeed;
     }
 
     public void GetValueFromMathObject(MathObject mathObj)

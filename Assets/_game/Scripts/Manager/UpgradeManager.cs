@@ -95,29 +95,13 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
     public void ChangeCharacterRootModel(int characterLevel) // đang được gọi ở loadlevel mới và upgrade thành công
     {
-        // character-root
-        /*if(characterRootModel != null) Destroy(characterRootModel);
-        characterRootModel = null;
-        characterRootModel = Instantiate(characterDatas[characterLevel - 1].model.gameObject);
-        characterRootModel.transform.SetParent(Player.ins.characterRoot.transform);
-        characterRootModel.transform.localPosition = characterDatas[characterLevel - 1].offsetPos;*/
         characterRootModel = PoolCharacterModel.ins.GetModel();
         characterRootModel.transform.SetParent(Player.ins.characterRoot.transform);
         characterRootModel.transform.localPosition = characterDatas[characterLevel - 1].offsetPos;
-
     }
 
     public void ChangePatrolCharacterModels(int characterLevel) // đang được gọi ở loadlevel mới và upgrade thành công
     {
-        // clear model list
-        /*foreach (var model in patrolModelList)
-        {
-            if(model != null)
-            {
-                Destroy(model.gameObject);
-            }
-        }*/
-
         patrolModelList.Clear();
 
         // spawn new model
