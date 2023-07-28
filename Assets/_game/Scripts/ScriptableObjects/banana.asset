@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eee0f1da9aa86643a246aa7e122bf64, type: 3}
+  m_Name: banana
+  m_EditorClassIdentifier: 
+  model: {fileID: 3327133320494810435, guid: e9cbbe18da5cad343a3147faa4654945, type: 3}
+  offsetPos: {x: 0, y: -1, z: 0}
+  controller: {fileID: 9100000, guid: daa06d1c7ee0e4942b178e29d3c3b50c, type: 2}
