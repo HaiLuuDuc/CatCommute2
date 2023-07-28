@@ -118,7 +118,6 @@ public class Character : MathObject
         if(frontCharacter != null)
         {
             Vector3 followTarget = frontCharacter.transform.position - new Vector3(0, 0, 1) * distance;
-            followTarget.y = this.transform.position.y;
             float newX = Mathf.Lerp(this.transform.position.x, followTarget.x, moveSpeedX * Time.deltaTime);
             float newZ = Mathf.Lerp(this.transform.position.z, followTarget.z, moveSpeedZ * Time.deltaTime);
             transform.position = new Vector3(newX, this.transform.position.y, newZ);
@@ -220,7 +219,7 @@ public class Character : MathObject
 
         if (other.CompareTag("jump"))
         {
-            Debug.Log("jump");
+            Debug.Log(this.gameObject.name + " jump");
             rb.velocity = Vector3.zero;
             rb.AddForce(new Vector3(0, jumpForce, 0));
         }

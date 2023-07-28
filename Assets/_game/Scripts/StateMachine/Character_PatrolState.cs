@@ -7,6 +7,7 @@ public class Character_PatrolState : Character_StateBase
     private bool isMovingRight;
     public override void EnterState(Character c)
     {
+        c.rb.velocity = Vector3.zero;
         c.ChangeAnim("run");
         isMovingRight = c.transform.eulerAngles.y == 90?true:false;
         Debug.Log("enter patrol state");

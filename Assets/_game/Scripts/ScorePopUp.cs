@@ -17,13 +17,13 @@ public class ScorePopUp : Singleton<ScorePopUp>
 
     public void Show(int value, Color textColor)
     {
-        Hide();
         if(showCoroutine != null)
         {
             StopCoroutine(showCoroutine);
             showCoroutine = null;
         }
-        Debug.Log(value);
+        Hide();
+        DOTween.KillAll();
         scoreText.color = textColor;
         if (value>0)
         {
