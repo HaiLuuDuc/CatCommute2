@@ -318,7 +318,6 @@ public class Character : MathObject
        
             if (collision.gameObject.tag == "wall")
             {
-                Wall wall = collision.gameObject.GetComponent<Wall>();
                 isCollidingWall = true;
                 if (collision.contacts.Length > 0)
                 {

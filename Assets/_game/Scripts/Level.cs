@@ -23,12 +23,7 @@ public class Level : MonoBehaviour
     [Header("Traps : ")]
     public LuoiCua[] luoiCuas;
     public DamageCube[] damageCubes;
-    public BoxCollider wallCollider;
 
-    private void Start()
-    {
-        wallCollider = GameObject.FindGameObjectWithTag("wall").GetComponent<BoxCollider>();
-    }
 
     public int estimatedMaxScore;
 
