@@ -16,6 +16,8 @@ public class Player : Singleton<Player>
     [Header("Run : ")]
     public Transform targetRun;
     public float runSpeed;
+    public float initialRunSpeed;
+    public float blockedRunSpeed;
 
     [Header("Manage : ")]
     public List<Character> characterList = new List<Character>();
@@ -28,13 +30,18 @@ public class Player : Singleton<Player>
 
     public bool isAlive = true;
 
-
+    private void Start()
+    {
+        initialRunSpeed = runSpeed;
+        blockedRunSpeed = runSpeed/3;
+    }
 
 
     public void OnStartNewLevel()
     {
         //set target run (ở cuối đường)
-        targetRun = LevelManager.ins.currentLevel.targetRun;    
+        targetRun = LevelManager.ins.currentLevel.targetRun;
+        runSpeed = initialRunSpeed;
         //set vị trí ban đầu
         this.transform.position = new Vector3(0, 0, 170f);
         characterRoot.transform.localPosition = Vector3.zero;
@@ -174,4 +181,20 @@ public class Player : Singleton<Player>
         }
     }
 
+    //NEEDTOFIX
+    public bool IsPointInOABB(Vector3 point, BoxCollider box)
+    {
+        point = box.transform.InverseTransformPoint(point) - box.center;
+
+        float halfX = (box.size.x * 0.5f);
+        float halfY = (box.size.y * 0.5f);
+        float halfZ = (box.size.z * 0.5f);
+
+        if (point.x < halfX && point.x > -halfX &&
+           point.y < halfY && point.y > -halfY &&
+           point.z < halfZ && point.z > -halfZ)
+            return true;
+        else
+            return false;
+    }
 }

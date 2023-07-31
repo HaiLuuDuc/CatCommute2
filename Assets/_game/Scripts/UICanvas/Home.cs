@@ -1,14 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Ready : UICanvas
+public class Home : UICanvas
 {
-    public TextMeshProUGUI currentCoinText;
+    public TextMeshProUGUI levelText;
     public TextMeshProUGUI coinToUpgradeText;
+    public TextMeshProUGUI currentCoinText;
 
-    public static Ready ins;
+    public static Home ins;
     private void Awake()
     {
         ins = this;
@@ -25,8 +27,14 @@ public class Ready : UICanvas
     public override void Open()
     {
         base.Open();
+        UpdateLevelText();
         UpdateCoinToUpgradeText();
         UpdateCurrentCoinText();
+    }
+
+    private void UpdateLevelText()
+    {
+        levelText.text = "Lv " + DataManager.ins.playerData.characterLevel.ToString();
     }
 
     public void Btn_Upgrade()

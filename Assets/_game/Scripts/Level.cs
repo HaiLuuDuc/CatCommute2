@@ -22,6 +22,13 @@ public class Level : MonoBehaviour
 
     [Header("Traps : ")]
     public LuoiCua[] luoiCuas;
+    public DamageCube[] damageCubes;
+    public BoxCollider wallCollider;
+
+    private void Start()
+    {
+        wallCollider = GameObject.FindGameObjectWithTag("wall").GetComponent<BoxCollider>();
+    }
 
     public int estimatedMaxScore;
 
@@ -62,7 +69,7 @@ public class Level : MonoBehaviour
     public void SetUpMap()
     {
         // calculate max score (for fun)
-        estimatedMaxScore = Player.ins.targetScore;
+        estimatedMaxScore = (int)Player.ins.targetScore;
 
         // tiles
         tiles = GetComponentsInChildren<Tile>(true);
@@ -89,6 +96,12 @@ public class Level : MonoBehaviour
             luoiCua.gameObject.SetActive(true);
             luoiCua.OnInit();
         }
+        damageCubes = GetComponentsInChildren<DamageCube>(true);
+        foreach (DamageCube damageCube in damageCubes)
+        {
+            damageCube.gameObject.SetActive(true);
+            damageCube.OnInit();
+        }
 
         // boss
         boss = LevelManager.ins.currentLevel.arena.boss;
@@ -106,4 +119,6 @@ public class Level : MonoBehaviour
             patrolCharacter.frontCharacter = null;
         }
     }
+    
+
 }

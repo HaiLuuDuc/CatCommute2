@@ -14,6 +14,6 @@ public class Lose : UICanvas
     {
         LevelManager.ins.LoadLevel(DataManager.ins.playerData.currentLevelIndex, false);
         UIManager.ins.CloseAll();
-        UIManager.ins.OpenUI<Ready>();
+        UIManager.ins.OpenUI<Home>();
     }
 }

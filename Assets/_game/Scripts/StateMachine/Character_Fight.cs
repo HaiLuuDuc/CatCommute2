@@ -15,7 +15,11 @@ public class Character_Fight : Character_StateBase
         if(LevelManager.ins.isPlayerWin == 1 && LevelManager.ins.currentLevel.boss.currentScore <= 0)
         {
             LevelManager.ins.currentLevel.boss.SwitchState(LevelManager.ins.currentLevel.boss.dieState);
-            c.SwitchState(c.runState);
+            c.SwitchState(c.danceState);
+            Timer.Do(UIManager.ins, () =>
+            {
+                UIManager.ins.OpenUI<Win>();
+            }, 2f);
             MovementController.ins.isBlockControl = true;
         }
         else if(LevelManager.ins.isPlayerWin == -1 && Player.ins.currentScore <= 0)

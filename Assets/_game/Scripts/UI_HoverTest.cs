@@ -7,6 +7,8 @@ public class UI_HoverTest : Singleton<UI_HoverTest>
 {
     int UILayer;
 
+    [SerializeField]
+    public bool isHoveringUI => IsPointerOverUIElement();
     private void Start()
     {
         DontDestroyOnLoad(gameObject);

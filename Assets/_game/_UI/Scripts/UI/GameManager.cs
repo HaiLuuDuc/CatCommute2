@@ -69,7 +69,7 @@ public class GameManager : Singleton<GameManager>
         PoolCharacterModel.ins.OnInit();
         LevelManager.ins.OnInit();
 
-        UIManager.ins.OpenUI<Ready>();
+        UIManager.ins.OpenUI<Home>();
         yield return null;
     }
 

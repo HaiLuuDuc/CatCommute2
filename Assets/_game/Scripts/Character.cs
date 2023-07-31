@@ -14,7 +14,7 @@ public class Character : MathObject
     public Character frontCharacter;
     public float moveSpeedX;
     public float moveSpeedZ;
-    public static float distance = 1.6f;
+    public static float distance = 1.76f;
 
     [Header("Components : ")]
     public Rigidbody rb;
@@ -28,6 +28,12 @@ public class Character : MathObject
     public Animator anim;
     public string currentAnim;
 
+    [Header("Wall Detetion : ")]
+    public Vector3 wallContactPoint;
+    public bool isCollidingWall = false;
+    public bool isInWallZone = false;
+
+
     public bool isJump = false;
 
 
@@ -39,6 +45,7 @@ public class Character : MathObject
     [HideInInspector] public Character_QueueToFight queueToFightState = new Character_QueueToFight();
     [HideInInspector] public Character_PatrolState patrolState = new Character_PatrolState();
     [HideInInspector] public Character_Die dieState = new Character_Die();
+    [HideInInspector] public Character_Dance danceState = new Character_Dance();
 
     public void SwitchState(Character_StateBase state)
     {
@@ -69,6 +76,8 @@ public class Character : MathObject
         capsuleCollider = model.GetComponent<CapsuleCollider>();
         anim = model.GetComponent<Animator>();
         anim.enabled = true;
+        isCollidingWall = false;
+        isInWallZone = false;
 
         EnablePhysics();
 
@@ -120,7 +129,19 @@ public class Character : MathObject
         if(frontCharacter != null)
         {
             Vector3 followTarget = frontCharacter.transform.position - new Vector3(0, 0, 1) * distance;
-            float newX = Mathf.Lerp(this.transform.position.x, followTarget.x, moveSpeedX * Time.deltaTime);
+            float newX = 0;
+            newX = Mathf.Lerp(this.transform.position.x, followTarget.x, moveSpeedX * Time.deltaTime);
+            if (isInWallZone)
+            {
+                if (this.transform.position.x < 0 && followTarget.x > 0)
+                {
+                    newX = - this.capsuleCollider.radius / 2;
+                }
+                else if (this.transform.position.x > 0 && followTarget.x < 0)
+                {
+                    newX = this.capsuleCollider.radius / 2;
+                }
+            }
             float newZ = Mathf.Lerp(this.transform.position.z, followTarget.z, moveSpeedZ * Time.deltaTime);
             transform.position = new Vector3(newX, this.transform.position.y, newZ);
             LookAt(frontCharacter.transform.position);
@@ -208,6 +229,8 @@ public class Character : MathObject
                 }, 1f);
             }
 
+            
+
         }
 
         if (other.CompareTag("luoicua"))
@@ -228,7 +251,6 @@ public class Character : MathObject
                 Player.ins.characterList.Remove(this);
                 this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
                 this.gameObject.SetActive(false);
-
             }
         }
 
@@ -257,20 +279,70 @@ public class Character : MathObject
                 Player.ins.characterList.Remove(this);
                 this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
                 this.gameObject.SetActive(false);
-
             }
         }
 
-        
+        if (other.CompareTag("wallzone"))
+        {
+            isInWallZone = true;
+        }
 
     }
 
     private void OnTriggerExit(Collider other)
     {
-
         if (other.CompareTag("jump"))
         {
             isJump = false;
+        }
+
+        if (other.CompareTag("wallzone"))
+        {
+            isInWallZone = false;
+        }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "damagecube")
+        {
+            DamageCube damageCube = collision.gameObject.GetComponent<DamageCube>();
+            if (damageCube.isCollisionWithCharacter) return;
+            Player.ins.runSpeed = Player.ins.blockedRunSpeed;
+            Player.ins.targetScore -= (int)damageCube.initialValue;
+            Player.ins.LerpCurrentScore(damageCube.initialValue/damageCube.decreaseSpeed);
+            damageCube.isCollisionWithCharacter = true;
+        }
+
+       
+            if (collision.gameObject.tag == "wall")
+            {
+                Wall wall = collision.gameObject.GetComponent<Wall>();
+                isCollidingWall = true;
+                if (collision.contacts.Length > 0)
+                {
+                    wallContactPoint = collision.contacts[0].point;
+                    Debug.Log(wallContactPoint);
+                }
+            }
+        
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.gameObject.tag == "damagecube")
+        {
+            DamageCube damageCube = collision.gameObject.GetComponent<DamageCube>();
+            damageCube.OnCharacterStay();
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "wall")
+        {
+            wallContactPoint = Vector3.zero;
+            isCollidingWall = false;
         }
     }
 

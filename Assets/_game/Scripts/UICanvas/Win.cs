@@ -14,6 +14,6 @@ public class Win : UICanvas
     {
         LevelManager.ins.LoadNextLevel();
         UIManager.ins.CloseAll();
-        UIManager.ins.OpenUI<Ready>();
+        UIManager.ins.OpenUI<Home>();
     }
 }

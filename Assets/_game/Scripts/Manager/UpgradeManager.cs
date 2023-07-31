@@ -77,6 +77,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
             }
             DataManager.ins.playerData.characterLevel++;
+            Home.ins.levelText.text = "Lv " + DataManager.ins.playerData.characterLevel.ToString();
 
             // change model
             PoolCharacterModel.ins.ChangePrefab();

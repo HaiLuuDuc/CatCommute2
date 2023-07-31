@@ -27,7 +27,7 @@ public class Character_Run : Character_StateBase
     {
         if (c.isRoot)
         {
-            if (Vector3.Distance(Player.ins.transform.position, Player.ins.targetRun.position) < 0.01f)
+            /*if (Vector3.Distance(Player.ins.transform.position, Player.ins.targetRun.position) < 0.01f)
             {
                 UIManager.ins.OpenUI<Win>();
                 foreach(Character character in LevelManager.ins.currentLevel.patrolCharacters)
@@ -39,12 +39,14 @@ public class Character_Run : Character_StateBase
             else
             {
                 Player.ins.Run();
-            }
+            }*/
+            Player.ins.Run();
         }
         else
         {
             c.FollowFrontCharacter();
         }
+        c.rb.velocity = new Vector3(0, c.rb.velocity.y, c.rb.velocity.z);
     }
 
     public override void ExitState(Character c)

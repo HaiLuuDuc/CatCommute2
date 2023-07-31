@@ -13,6 +13,9 @@ TagManager:
   - luoicua
   - jump
   - riu
+  - damagecube
+  - wall
+  - wallzone
   layers:
   - Default
   - TransparentFX
