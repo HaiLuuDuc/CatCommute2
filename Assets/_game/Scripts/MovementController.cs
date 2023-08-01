@@ -27,28 +27,23 @@ public class MovementController : Singleton<MovementController>
             if (Player.ins.characterRoot.wallContactPoint.x > Player.ins.characterRoot.transform.position.x
                 && diffX > 0 && Player.ins.characterRoot.isCollidingWall)// wall bên phải characterroot
             {
-                Debug.Log(1);
                 return;
             }
             if (Player.ins.characterRoot.wallContactPoint.x < Player.ins.characterRoot.transform.position.x
                 && diffX < 0 && Player.ins.characterRoot.isCollidingWall)// wall bên trái characterroot
             {
-                Debug.Log(2);
                 return;
             }
             Vector3 newPos = moveObj.transform.position + Vector3.right * Time.smoothDeltaTime * spdSwipe * diffX;
-            Debug.Log(Player.ins.characterRoot.transform.position.x + "  " + newPos.x);
             if (Player.ins.characterRoot.isInWallZone)
             {
                 if (Player.ins.characterRoot.transform.position.x < 0 && newPos.x > 0)
                 {
-                    Debug.Log(3);
                     moveObj.localPosition = Vector3.zero - new Vector3(Player.ins.characterRoot.capsuleCollider.radius / 2, 0, 0);
                     return;
                 }
                 else if (Player.ins.characterRoot.transform.position.x > 0 && newPos.x < 0)
                 {
-                    Debug.Log(4);
                     moveObj.localPosition = Vector3.zero + new Vector3(Player.ins.characterRoot.capsuleCollider.radius / 2, 0, 0);
                     return;
                 }

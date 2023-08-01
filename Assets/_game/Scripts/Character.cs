@@ -322,7 +322,6 @@ public class Character : MathObject
                 if (collision.contacts.Length > 0)
                 {
                     wallContactPoint = collision.contacts[0].point;
-                    Debug.Log(wallContactPoint);
                 }
             }
         

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DamageCube : MonoBehaviour
@@ -12,6 +13,8 @@ public class DamageCube : MonoBehaviour
     private Vector3 initialPos;
 
     public Rigidbody rb;
+
+    public TextMeshProUGUI valueText;
 
     public bool isCollisionWithCharacter = false;
 
@@ -27,6 +30,7 @@ public class DamageCube : MonoBehaviour
         this.transform.localScale = Vector3.one;
         rb.velocity = Vector3.zero;
         isCollisionWithCharacter = false;
+        UpdateValueText();
     }
 
     public void OnCharacterStay()
@@ -41,6 +45,19 @@ public class DamageCube : MonoBehaviour
         else
         {
             this.transform.localScale = new Vector3(1, 1, currentValue/initialValue);
+        }
+        UpdateValueText();
+    }
+
+    public void UpdateValueText()
+    {
+        if (currentValue <= 0)
+        {
+            valueText.text = "";
+        }
+        else
+        {
+            valueText.text = currentValue.ToString();
         }
     }
 }
