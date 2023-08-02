@@ -27,6 +27,7 @@ public class Home : UICanvas
     public override void Open()
     {
         base.Open();
+        DataManager.ins.playerData.coinToUpgrade = 100;
         UpdateLevelText();
         UpdateCoinToUpgradeText();
         UpdateCurrentCoinText();
@@ -47,6 +48,12 @@ public class Home : UICanvas
         Player.ins.currentScore = Player.ins.targetScore += 100;
 
         UpdateCoinToUpgradeText();
+        UpdateCurrentCoinText();
+    }
+
+    public void Btn_EarnGold()
+    {
+        DataManager.ins.playerData.coin += 100;
         UpdateCurrentCoinText();
     }
 

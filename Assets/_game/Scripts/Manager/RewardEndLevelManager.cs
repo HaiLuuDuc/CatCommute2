@@ -8,7 +8,8 @@ public class RewardEndLevelManager : Singleton<RewardEndLevelManager>
 
     public void RewardWin()
     {
-        rewardCoin = 2.5f * Player.ins.targetScore;
+        //rewardCoin = 2.5f * Player.ins.targetScore;
+        rewardCoin = 1f * Player.ins.targetScore;
         Debug.Log("rewardCoin : " + rewardCoin);
     }
 
