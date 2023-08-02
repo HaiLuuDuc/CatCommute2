@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5850353899646804166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6730545355130411236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5355326853539315691}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Neck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5999322399749939091}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Head1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 235603127946644718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4505068488219580361}
   - component: {fileID: 1855691662147936227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:KiwiCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -272,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2188215253643941070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6676706113623291334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2905051422108923474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Head_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 51585833153327225}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7751676167280935837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8510918406989077555}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:DeformationSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5455641659894357328}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4931745499519613901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6786187324107631030}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2455204436566212191}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 7118872311649147788}
   - component: {fileID: 4548202300600195813}
   - component: {fileID: 1524666273967508588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: kiwi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6413098906614505230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4390252237217701547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7967767135498805284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3672824298855869299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8121072047538567336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Face_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6228191822114164843}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Kiwi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +856,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7118361055285716423}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: KiwiCat_rig01:Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3410763243863574949}
   - component: {fileID: 6106369821504904297}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: character
   m_Icon: {fileID: 0}

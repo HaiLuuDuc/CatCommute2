@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3671343009173368863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:DeformationSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 962558710530571496}
   - component: {fileID: 845266094236354004}
   - component: {fileID: 4687239764152375847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: avocado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6229876945913720957}
   - component: {fileID: 5858640196300244022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:AvocadoCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6227176452100131339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8838084678311083475}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8617561617665792005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Face_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3579381521133369117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7570246092828037716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4637471558638869588}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7007660089206374771}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5856687704104053797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -469,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6514126079454779990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5580692885985392497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7004708025241375801}
   - component: {fileID: 887237986924439118}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: character
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8422020097174021422}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 107528467904279673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Avocado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2830347871099956068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Head1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7227640716829289946}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +707,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998745993026514419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Neck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 20365517677790628}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3241637459107998867}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -806,7 +806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286198650580649917}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Head_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -838,7 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891574337256391564}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2580702822259632573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9198387747107178230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Avocado_rig01:Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,6 +6,7 @@ public class LevelManager : Singleton<LevelManager>
 {
     public Level[] levels;
     public Level currentLevel;
+    public int currentLevelIndex;
     public bool isStartLevel = false;
     public int isPlayerWin;
     public bool isFirstPlay = true;
@@ -68,6 +69,7 @@ public class LevelManager : Singleton<LevelManager>
         DataManager.ins.playerData.currentLevelIndex = newLevelIndex;
         isStartLevel = false;
         currentLevel.arena.isStartFight = false;
+        currentLevelIndex = newLevelIndex;
     }
 
     public void LoadNextLevel()

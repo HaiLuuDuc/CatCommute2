@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class Home : UICanvas
 {
+    public TextMeshProUGUI currentCoinText;
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI coinToUpgradeText;
-    public TextMeshProUGUI currentCoinText;
 
     public static Home ins;
     private void Awake()
@@ -32,19 +32,27 @@ public class Home : UICanvas
         UpdateCurrentCoinText();
     }
 
-    private void UpdateLevelText()
+    public void Btn_Outfit()
     {
-        levelText.text = "Lv " + DataManager.ins.playerData.characterLevel.ToString();
+        UIManager.ins.CloseAll();
+        UIManager.ins.OpenUI<Outfit>();
     }
 
     public void Btn_Upgrade()
     {
         UpgradeManager.ins.DecreaseCoin();
         UpgradeManager.ins.DecreaseRemainUpgradeCount();
-        UpgradeManager.ins.SetNewLevelBaseOnRemainUpgradeCount();
+        //UpgradeManager.ins.SetNewLevelBaseOnRemainUpgradeCount();
+
+        Player.ins.currentScore = Player.ins.targetScore += 100;
 
         UpdateCoinToUpgradeText();
         UpdateCurrentCoinText();
+    }
+
+    private void UpdateLevelText()
+    {
+        levelText.text = "Level " + (LevelManager.ins.currentLevelIndex + 1).ToString();
     }
 
     public void UpdateCoinToUpgradeText()

@@ -18,7 +18,9 @@ public class Character_Fight : Character_StateBase
             c.SwitchState(c.danceState);
             Timer.Do(UIManager.ins, () =>
             {
-                UIManager.ins.OpenUI<Win>();
+                if (!UIManager.ins.IsOpened<Win>()) { 
+                    UIManager.ins.OpenUI<Win>();
+                }
             }, 2f);
             MovementController.ins.isBlockControl = true;
         }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2535080954301740991}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Head1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8631840500955271269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183011075314205631}
   - component: {fileID: 6746547972383131777}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Pumpkin_Cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 440686792079980173}
   - component: {fileID: 1174261681223806752}
   - component: {fileID: 1960952843828278205}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4272875689342443173}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2121374597233531797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 851803480020404958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 611991685473910240}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6153699484129135346}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7326303259516974676}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Pumpkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1058356968701963769}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5470711810081302019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Face_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6539109607287812548}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2496187801954765077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3072251952543813778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3645919150264562392}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Neck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5452497547873523660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4241483537322807686}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Head_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -697,7 +697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8526956448208106673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4058966961360930789}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2062052044987567185}
   - component: {fileID: 1851692480298225303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: character
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2190749327015466718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2827126805920218417}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6152784933886750806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:DeformationSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6815149976606143336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pumpkin_rig01:Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

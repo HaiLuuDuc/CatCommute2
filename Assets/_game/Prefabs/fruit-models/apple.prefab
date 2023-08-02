@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2691551806015731880}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3027501044991062648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3342493882562841134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5339646770797051575}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9121421801759958000}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145552180844097373}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7930352166270340288}
   - component: {fileID: 8805549592266623592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:AppleCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5020936312655951934}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3690804591427451636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:DeformationSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,7 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3639948676354170874}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440747494298645606}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Face_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3541064531803714299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1807506519076887834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3409234802746863329}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,7 +524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673837948610287869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560024078335056035}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Neck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -591,7 +591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4599333848389802759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2078452241144301167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Head1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 409999761506923120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1504941893933168567}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Head_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270218811353652122}
   - component: {fileID: 251135755887570457}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: character
   m_Icon: {fileID: 0}
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 6078985124493700318}
   - component: {fileID: 1626180338629013193}
   - component: {fileID: 8218402834353427034}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9040533504706760864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7794196946707381589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Apple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5483752194369271224}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Apple_rig01:Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}

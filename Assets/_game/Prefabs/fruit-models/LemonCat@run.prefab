@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5495360631708260079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Toes_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2360663653572068998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 126282891555911184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7486050244491450218}
   - component: {fileID: 1097437424079610299}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: character
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360817525002587952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Face_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671834741874060238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7426913084686801785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:ThumbFinger_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,7 +248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6583892560952682718}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3924954566343245626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6725347603358486246}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Geometry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8355472573822745772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4979352786616020834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 3743206670176408499}
   - component: {fileID: 8649108008012195667}
   - component: {fileID: 2940928021816310773}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat@run
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7171044108581336657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Head_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3371760416702348827}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8623437501159228975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:MiddleFinger0_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3000539011770312180}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8276833644692131925}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:MiddleFinger1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5252066032273606053}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:MiddleFinger0_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8532424287182115039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Tail_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6925638029498420596}
   - component: {fileID: 8787531427183532695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:LemonCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3662505073499779101}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:ThumbFinger_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8913980263685475244}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Toes_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -875,7 +875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8790548745574521702}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:FaceEnd_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8827460762735078434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Head1_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5261146490922475990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7719932935878814182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3205691695060411703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2340637409814455524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1066,7 +1066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5483890169110766375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:DeformationSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1098,7 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5265869854315229209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4945970012463799415}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1163,7 +1163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3687597248370412853}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:Neck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1196,7 +1196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 729815549606951937}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LemonCat:MiddleFinger1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}

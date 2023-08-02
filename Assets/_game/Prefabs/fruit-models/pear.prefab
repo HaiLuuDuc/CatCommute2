@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3169248866585650875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Chest_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3280097201727009615}
   - component: {fileID: 4701119361203706623}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:PearCat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3374374280499841877}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6665127860248036619}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Head_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6113184348178704569}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Root_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3933195434103930678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Spine_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7979080056084287687}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:DeformationSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7437237792724022233}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Ankle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4199971814346284711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Wrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 468914791742926730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Elbow_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 3020013032200452083}
   - component: {fileID: 1233303544021958020}
   - component: {fileID: 3818941703867808152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1697452037748033565}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Wrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -506,7 +506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920661630829916656}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Knee_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -538,7 +538,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1601867156817943760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Ankle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6677268424059211320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Face_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7926660972855098099}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -632,7 +632,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5089537998003119730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Head1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -663,7 +663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8699776991159019375}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,7 +696,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4967015657323939509}
   - component: {fileID: 7980740943044566951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trigger
   m_TagString: character
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5671131933684118126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Elbow_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,7 +773,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3763051660542778975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -805,7 +805,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1940733659944716598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Pear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2213630596283796115}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5376734207240729670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Knee_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +901,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2191095674228130900}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PearCat_rig01:Neck_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}

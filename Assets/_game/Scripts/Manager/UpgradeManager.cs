@@ -20,13 +20,13 @@ public class UpgradeManager : Singleton<UpgradeManager>
         DataManager.ins.playerData.remainUpgradeCount--;
     }
 
-    public void SetNewLevelBaseOnRemainUpgradeCount()
+    /*public void SetNewLevelBaseOnRemainUpgradeCount()
     {
         if(DataManager.ins.playerData.remainUpgradeCount <= 0)
         {
             switch (DataManager.ins.playerData.characterLevel)
             {
-                /*case 1: // lv1 lên lv2
+                *//*case 1: // lv1 lên lv2
                     DataManager.ins.playerData.remainUpgradeCount = 10; // lv2 lên lv3 cần 10 upgrade
                     break;
                 case 2: // lv2 lên lv3
@@ -49,7 +49,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
                     break;
                 case 8: // lv8 lên lv9
                     DataManager.ins.playerData.remainUpgradeCount = 200;
-                    break;*/
+                    break;*//*
                 case 1: // lv1 lên lv2
                     DataManager.ins.playerData.remainUpgradeCount = 2; // lv2 lên lv3 cần 10 upgrade
                     break;
@@ -91,6 +91,25 @@ public class UpgradeManager : Singleton<UpgradeManager>
                 Character patrolCharacter = LevelManager.ins.currentLevel.patrolCharacters[i];
                 patrolCharacter.OnInit(patrolModelList[i]);
             }
+        }
+    }*/
+
+    public void ChangeModel(int modelIndex)
+    {
+        if (DataManager.ins.playerData.characterLevel == modelIndex + 1) return;
+        DataManager.ins.playerData.characterLevel = modelIndex + 1;
+
+        // change model
+        PoolCharacterModel.ins.ChangePrefab();
+        ChangeCharacterRootModel(DataManager.ins.playerData.characterLevel);
+        ChangePatrolCharacterModels(DataManager.ins.playerData.characterLevel);
+
+        // characters OnInit
+        Player.ins.characterRoot.OnInit(characterRootModel);
+        for (int i = 0; i < LevelManager.ins.currentLevel.patrolCharacters.Length; i++)
+        {
+            Character patrolCharacter = LevelManager.ins.currentLevel.patrolCharacters[i];
+            patrolCharacter.OnInit(patrolModelList[i]);
         }
     }
 

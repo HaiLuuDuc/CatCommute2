@@ -19,7 +19,7 @@ public class Loading : UICanvas
         float value = 0;
         while(value < 1)
         {
-            value += Time.deltaTime/3;
+            value += Time.deltaTime/2;
             slider.value = value;
             yield return null;
         }
