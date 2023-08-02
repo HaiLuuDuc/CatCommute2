@@ -83,9 +83,13 @@ public class Player : Singleton<Player>
 
             if (!LevelManager.ins.currentLevel.arena.isStartFight)
             {
-                foreach (Character character in characterList)
+                for (int i = 0; i < characterList.Count; i++)
                 {
-                    character.SwitchState(character.dieState);
+                    int index = i;
+                    Timer.Do(characterList[index], () =>
+                    {
+                        characterList[index].SwitchState(characterList[index].dieState);
+                    }, index * 0.13f);
                 }
             }
 

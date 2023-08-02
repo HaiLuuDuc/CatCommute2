@@ -20,6 +20,7 @@ public class Character_Run : Character_StateBase
             c.DisablePhysics();
             Timer.Do(c, () => c.EnablePhysics(), 1f);
         }
+        c.ChangeAnim("idle");
         c.ChangeAnim("run");
     }
 

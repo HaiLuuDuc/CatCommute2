@@ -6,7 +6,6 @@ public class Boss_Idle : Boss_StateBase
 {
     public override void EnterState(Boss b)
     {
-        Debug.Log("boss enter idle state");
         b.ChangeAnim("idle");
     }
 

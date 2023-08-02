@@ -2,10 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Unity.VisualScripting;
-using UnityEngine.UIElements;
-using UnityEngine.UI;
-using JetBrains.Annotations;
 
 public class DataManager : MonoBehaviour
 {

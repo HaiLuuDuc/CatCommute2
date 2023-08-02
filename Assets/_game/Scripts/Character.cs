@@ -21,7 +21,7 @@ public class Character : MathObject
     public CapsuleCollider capsuleCollider;
 
     public static float patrolSpeed = 1.6f;
-    public static float jumpForce = 600f;
+    public static float jumpForce = 700f;
 
 
     [Header("Anim : ")]
