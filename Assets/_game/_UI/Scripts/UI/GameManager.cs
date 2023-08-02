@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     public Level[] levels;
     public int levelToPlay = -1;
     public bool isCheat = false;
-    protected void Awake()
+    public override void Awake()
     {
         base.Awake();
         Input.multiTouchEnabled = false;
@@ -66,7 +66,8 @@ public class GameManager : Singleton<GameManager>
                 && LevelManager.ins != null
             )
         );
-        PoolCharacterModel.ins.OnInit();
+        PoolCharacterModel.ins.InitAllPools();
+        PoolCharacterModel.ins.InitMainPool();
         LevelManager.ins.OnInit();
 
         UIManager.ins.OpenUI<Loading>();

@@ -33,6 +33,8 @@ public class Character : MathObject
     public bool isCollidingWall = false;
     public bool isInWallZone = false;
 
+    public GameObject model;
+
 
     public bool isJump = false;
 
@@ -90,6 +92,8 @@ public class Character : MathObject
             InitScoreTextUI();
             SwitchState(patrolState);
         }
+
+        this.model = model;
 
     }
 
@@ -250,6 +254,7 @@ public class Character : MathObject
 
                 Player.ins.characterList.Remove(this);
                 this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
+                PoolCharacterModel.ins.ReturnToPool(this.model);
                 this.gameObject.SetActive(false);
             }
         }
@@ -278,7 +283,9 @@ public class Character : MathObject
 
                 Player.ins.characterList.Remove(this);
                 this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
-                this.gameObject.SetActive(false);
+                /*PoolCharacterModel.ins.ReturnToPool(this.model);
+                this.gameObject.SetActive(false);*/
+                this.SwitchState(dieState);
             }
         }
 

@@ -75,6 +75,7 @@ public class LevelManager : Singleton<LevelManager>
     public void LoadNextLevel()
     {
         //NEEDTOFIX
+        PoolCharacterModel.ins.CollectAll();
         while (Player.ins.characterList.Count > 1)
         {
             Destroy(Player.ins.characterList[1].gameObject);
