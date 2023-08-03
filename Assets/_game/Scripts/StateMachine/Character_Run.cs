@@ -47,7 +47,11 @@ public class Character_Run : Character_StateBase
         {
             c.FollowFrontCharacter();
         }
-        c.rb.velocity = new Vector3(0, c.rb.velocity.y, c.rb.velocity.z);
+
+        if(c.rb.isKinematic == false)
+        {
+            c.rb.velocity = new Vector3(0, c.rb.velocity.y, c.rb.velocity.z);
+        }
     }
 
     public override void ExitState(Character c)

@@ -125,7 +125,6 @@ public class Character : MathObject
                 break;
         }
         scoreText.text = prev + value.ToString();
-        scoreText.outlineWidth = 0.001f;
     }
 
     public void FollowFrontCharacter()

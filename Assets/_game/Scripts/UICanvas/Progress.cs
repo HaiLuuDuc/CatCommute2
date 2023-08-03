@@ -11,6 +11,8 @@ public class Progress : UICanvas
     public Slider slider;
     public TextMeshProUGUI percentageText;
 
+    public TextMeshProUGUI buttonText;
+
     public bool isRunningProgress = false;
 
 
@@ -18,6 +20,7 @@ public class Progress : UICanvas
     {
         base.Open();
         RunProgress();
+        buttonText.text = "Continue";
     }
 
     public void Btn_Continue()
@@ -26,6 +29,11 @@ public class Progress : UICanvas
         LevelManager.ins.LoadNextLevel();
         UIManager.ins.CloseAll();
         UIManager.ins.OpenUI<Home>();
+        //claim
+        if(DataManager.ins.playerData.progress == 0)
+        {
+            DataManager.ins.playerData.maxCharacterLevel += 1;
+        }
     }
 
     public void RunProgress()
@@ -46,6 +54,7 @@ public class Progress : UICanvas
                 Debug.Log("Show reward after progress 100%");
                 //DataManager.ins.playerData.currentCharacterLevel += 1;
                 //DataManager.ins.playerData.maxCharacterLevel = Mathf.Max(DataManager.ins.playerData.currentCharacterLevel, DataManager.ins.playerData.maxCharacterLevel);
+                buttonText.text = "Claim";
                 DataManager.ins.playerData.progress = 0;
             }
         }));

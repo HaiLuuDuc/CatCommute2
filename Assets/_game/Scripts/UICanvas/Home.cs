@@ -61,7 +61,7 @@ public class Home : UICanvas
 
     public void Btn_EarnGold()
     {
-        DataManager.ins.playerData.rwCoinLevel += 1;
+        DataManager.ins.playerData.rewardEndGameLevel += 1;
         UpdateEarnGoldLevelText();
     }
 
@@ -87,7 +87,7 @@ public class Home : UICanvas
 
     public void UpdateEarnGoldLevelText()
     {
-        rwCoinLvText.text = "Lv " + DataManager.ins.playerData.rwCoinLevel.ToString();
+        rwCoinLvText.text = "Lv " + DataManager.ins.playerData.rewardEndGameLevel.ToString();
     }
 
     

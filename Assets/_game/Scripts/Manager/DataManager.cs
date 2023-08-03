@@ -71,7 +71,7 @@ public class PlayerData
     public int coinToUpgrade;
     public int currentLevelIndex;
     public int playerStartHealth;
-    public int rwCoinLevel;
+    public int rewardEndGameLevel;
     public int progress;
 
     public PlayerData()
@@ -83,7 +83,7 @@ public class PlayerData
         coinToUpgrade = 100;
         currentLevelIndex = -1;
         playerStartHealth = 1;
-        rwCoinLevel = 1;
+        rewardEndGameLevel = 1;
         progress = 50;
     }
 }
