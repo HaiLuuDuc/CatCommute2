@@ -102,7 +102,7 @@ public class Level : MonoBehaviour
         boss = LevelManager.ins.currentLevel.arena.boss;
         boss.gameObject.SetActive(true);
         //boss.OnInit((estimatedMaxScore - 500) / 100 * 100); // boss it hon player 500hp  
-        boss.OnInit(1000); // 1000 hp
+        boss.OnInit(10); // 1000 hp
     }
 
     public void SetUpPatrolCharacters()

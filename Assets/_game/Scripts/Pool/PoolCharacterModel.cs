@@ -61,7 +61,7 @@ public class PoolCharacterModel : Singleton<PoolCharacterModel>
     }*/
     public void InitMainPool()
     {
-        mainPool = dict[(ModelType)DataManager.ins.playerData.characterLevel - 1].pool;
+        mainPool = dict[(ModelType)DataManager.ins.playerData.currentCharacterLevel - 1].pool;
     }
 
     public GameObject GetModel()

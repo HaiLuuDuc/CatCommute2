@@ -26,7 +26,7 @@ public class MathObject : MonoBehaviour
 
         if (type == MathType.Add || type == MathType.Subtract)
         {
-            int randomValue = Random.Range(1, 8) * 100;
+            int randomValue = Random.Range(1, 8) * 4;
             value = randomValue;
         }
         else

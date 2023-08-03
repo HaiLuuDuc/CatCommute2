@@ -64,19 +64,27 @@ public class PlayerData
 
     [Header("--------- Game Params ---------")]
     public bool isSetUp = false;
-    public int characterLevel;
+    public int currentCharacterLevel;
+    public int maxCharacterLevel;
     public int coin;
     public int remainUpgradeCount;
     public int coinToUpgrade;
     public int currentLevelIndex;
+    public int playerStartHealth;
+    public int rwCoinLevel;
+    public int progress;
 
     public PlayerData()
     {
-        characterLevel = 1;
+        currentCharacterLevel = 1;
+        maxCharacterLevel = 1;
         coin = 1000000;
         remainUpgradeCount = 5;
         coinToUpgrade = 100;
         currentLevelIndex = -1;
+        playerStartHealth = 1;
+        rwCoinLevel = 1;
+        progress = 50;
     }
 }
 

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class RewardEndLevelManager : Singleton<RewardEndLevelManager>
 {
-    public float rewardCoin;
+    public int rewardCoin;
 
     public void RewardWin()
     {
-        //rewardCoin = 2.5f * Player.ins.targetScore;
-        rewardCoin = 1f * Player.ins.targetScore;
+        rewardCoin = (int)(25 * (1 + ((float)Player.ins.targetScore * (0.05f + (0.01f * (float)(DataManager.ins.playerData.rwCoinLevel-1))))));
         Debug.Log("rewardCoin : " + rewardCoin);
     }
 

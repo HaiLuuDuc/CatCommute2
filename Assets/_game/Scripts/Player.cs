@@ -47,7 +47,7 @@ public class Player : Singleton<Player>
         characterRoot.transform.localPosition = Vector3.zero;
         characterRoot.rb.velocity = Vector3.zero;
         
-        currentScore = targetScore = 100;
+        currentScore = targetScore = DataManager.ins.playerData.playerStartHealth;
         isAlive = true;
     }
 
@@ -89,7 +89,7 @@ public class Player : Singleton<Player>
                     Timer.Do(characterList[index], () =>
                     {
                         characterList[index].SwitchState(characterList[index].dieState);
-                    }, index * 0.13f);
+                    }, index * Time.deltaTime * 8);
                 }
             }
 

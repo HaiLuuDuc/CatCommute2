@@ -8,7 +8,13 @@ public class Home : UICanvas
 {
     public TextMeshProUGUI currentCoinText;
     public TextMeshProUGUI levelText;
+
+    [Header("Btn Start Number : ")]
+    public TextMeshProUGUI currentCharacterLevelText;
     public TextMeshProUGUI coinToUpgradeText;
+
+    [Header("Btn Earn Gold : ")]
+    public TextMeshProUGUI rwCoinLvText;
 
     public static Home ins;
     private void Awake()
@@ -27,10 +33,11 @@ public class Home : UICanvas
     public override void Open()
     {
         base.Open();
-        DataManager.ins.playerData.coinToUpgrade = 100;
         UpdateLevelText();
         UpdateCoinToUpgradeText();
         UpdateCurrentCoinText();
+        UpdateCharacterLevelText();
+        UpdateEarnGoldLevelText();
     }
 
     public void Btn_Outfit()
@@ -45,7 +52,8 @@ public class Home : UICanvas
         UpgradeManager.ins.DecreaseRemainUpgradeCount();
         //UpgradeManager.ins.SetNewLevelBaseOnRemainUpgradeCount();
 
-        Player.ins.currentScore = Player.ins.targetScore += 100;
+        Player.ins.currentScore = Player.ins.targetScore += 1;
+        DataManager.ins.playerData.playerStartHealth = Player.ins.currentScore;
 
         UpdateCoinToUpgradeText();
         UpdateCurrentCoinText();
@@ -53,8 +61,13 @@ public class Home : UICanvas
 
     public void Btn_EarnGold()
     {
-        DataManager.ins.playerData.coin += 100;
-        UpdateCurrentCoinText();
+        DataManager.ins.playerData.rwCoinLevel += 1;
+        UpdateEarnGoldLevelText();
+    }
+
+    public void UpdateCurrentCoinText()
+    {
+        currentCoinText.text = DataManager.ins.playerData.coin.ToString();
     }
 
     private void UpdateLevelText()
@@ -62,13 +75,22 @@ public class Home : UICanvas
         levelText.text = "Level " + (LevelManager.ins.currentLevelIndex + 1).ToString();
     }
 
+    public void UpdateCharacterLevelText()
+    {
+        currentCharacterLevelText.text = "Lv "  + DataManager.ins.playerData.currentCharacterLevel.ToString();
+    }
+
     public void UpdateCoinToUpgradeText()
     {
         coinToUpgradeText.text = DataManager.ins.playerData.coinToUpgrade.ToString();
     }
 
-    public void UpdateCurrentCoinText()
+    public void UpdateEarnGoldLevelText()
     {
-        currentCoinText.text = DataManager.ins.playerData.coin.ToString();
+        rwCoinLvText.text = "Lv " + DataManager.ins.playerData.rwCoinLevel.ToString();
     }
+
+    
+
+    
 }

@@ -20,13 +20,13 @@ public class UpgradeManager : Singleton<UpgradeManager>
         DataManager.ins.playerData.remainUpgradeCount--;
     }
 
-    /*public void SetNewLevelBaseOnRemainUpgradeCount()
+    public void SetNewLevelBaseOnRemainUpgradeCount()
     {
-        if(DataManager.ins.playerData.remainUpgradeCount <= 0)
+        if (DataManager.ins.playerData.remainUpgradeCount <= 0)
         {
-            switch (DataManager.ins.playerData.characterLevel)
+            switch (DataManager.ins.playerData.currentCharacterLevel)
             {
-                *//*case 1: // lv1 lên lv2
+                /*case 1: // lv1 lên lv2
                     DataManager.ins.playerData.remainUpgradeCount = 10; // lv2 lên lv3 cần 10 upgrade
                     break;
                 case 2: // lv2 lên lv3
@@ -49,7 +49,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
                     break;
                 case 8: // lv8 lên lv9
                     DataManager.ins.playerData.remainUpgradeCount = 200;
-                    break;*//*
+                    break;*/
                 case 1: // lv1 lên lv2
                     DataManager.ins.playerData.remainUpgradeCount = 2; // lv2 lên lv3 cần 10 upgrade
                     break;
@@ -76,13 +76,14 @@ public class UpgradeManager : Singleton<UpgradeManager>
                     break;
 
             }
-            DataManager.ins.playerData.characterLevel++;
-            Home.ins.levelText.text = "Lv " + DataManager.ins.playerData.characterLevel.ToString();
+            DataManager.ins.playerData.currentCharacterLevel++;
+            DataManager.ins.playerData.maxCharacterLevel = Mathf.Max(DataManager.ins.playerData.currentCharacterLevel, DataManager.ins.playerData.maxCharacterLevel);
+            Home.ins.UpdateCharacterLevelText();
 
             // change model
             PoolCharacterModel.ins.ChangePrefab();
-            ChangeCharacterRootModel(DataManager.ins.playerData.characterLevel);
-            ChangePatrolCharacterModels(DataManager.ins.playerData.characterLevel);
+            ChangeCharacterRootModel(DataManager.ins.playerData.currentCharacterLevel);
+            ChangePatrolCharacterModels(DataManager.ins.playerData.currentCharacterLevel);
 
             // characters OnInit
             Player.ins.characterRoot.OnInit(characterRootModel);
@@ -92,17 +93,17 @@ public class UpgradeManager : Singleton<UpgradeManager>
                 patrolCharacter.OnInit(patrolModelList[i]);
             }
         }
-    }*/
+    }
 
     public void ChangeModel(int modelIndex)
     {
-        if (DataManager.ins.playerData.characterLevel == modelIndex + 1) return;
-        DataManager.ins.playerData.characterLevel = modelIndex + 1;
+        if (DataManager.ins.playerData.currentCharacterLevel == modelIndex + 1) return;
+        DataManager.ins.playerData.currentCharacterLevel = modelIndex + 1;
 
         // change model
         PoolCharacterModel.ins.ChangePrefab();
-        ChangeCharacterRootModel(DataManager.ins.playerData.characterLevel);
-        ChangePatrolCharacterModels(DataManager.ins.playerData.characterLevel);
+        ChangeCharacterRootModel(DataManager.ins.playerData.currentCharacterLevel);
+        ChangePatrolCharacterModels(DataManager.ins.playerData.currentCharacterLevel);
 
         // characters OnInit
         Player.ins.characterRoot.OnInit(characterRootModel);
