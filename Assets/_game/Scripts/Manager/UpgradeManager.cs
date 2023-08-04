@@ -101,9 +101,13 @@ public class UpgradeManager : Singleton<UpgradeManager>
         DataManager.ins.playerData.currentCharacterLevel = modelIndex + 1;
 
         // change model
+        /*PoolCharacterModel.ins.ChangePrefab();
+        ChangeCharacterRootModel(DataManager.ins.playerData.currentCharacterLevel);
+        ChangePatrolCharacterModels(DataManager.ins.playerData.currentCharacterLevel);*/
+
         PoolCharacterModel.ins.ChangePrefab();
         ChangeCharacterRootModel(DataManager.ins.playerData.currentCharacterLevel);
-        ChangePatrolCharacterModels(DataManager.ins.playerData.currentCharacterLevel);
+
 
         // characters OnInit
         Player.ins.characterRoot.OnInit(characterRootModel);
@@ -116,9 +120,15 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
     public void ChangeCharacterRootModel(int characterLevel) // đang được gọi ở loadlevel mới và upgrade thành công
     {
+        if (characterRootModel != null)
+        {
+            PoolCharacterModel.ins.ReturnToPool(characterRootModel);
+        }
         characterRootModel = PoolCharacterModel.ins.GetModel();
         characterRootModel.transform.SetParent(Player.ins.characterRoot.transform);
         characterRootModel.transform.localPosition = characterDatas[characterLevel - 1].offsetPos;
+        characterRootModel.transform.localScale = Vector3.one;
+        characterRootModel.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 
     public void ChangePatrolCharacterModels(int characterLevel) // đang được gọi ở loadlevel mới và upgrade thành công
@@ -129,7 +139,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
         foreach (Character character in LevelManager.ins.currentLevel.patrolCharacters)
         {
             GameObject model = null;
-            model = PoolCharacterModel.ins.GetModel();
+            model = PoolCharacterModel.ins.GetRandomModel();
             model.transform.SetParent(character.transform);
             model.transform.localPosition = characterDatas[characterLevel - 1].offsetPos;
             model.transform.localScale = Vector3.one;

@@ -15,9 +15,9 @@ public class Riu : MonoBehaviour
     }
     public void OnInit()
     {
-        this.transform.eulerAngles = new Vector3(0, 0, currentAngleZ);
+        this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, 0, currentAngleZ);
         this.transform
-            .DORotate(new Vector3(0, 0, -currentAngleZ), duration, RotateMode.Fast)
+            .DORotate(new Vector3(this.transform.eulerAngles.x, 0, -currentAngleZ), duration, RotateMode.Fast)
             .SetEase(Ease.InOutQuad)
             .SetLoops(-1, LoopType.Yoyo);
     }

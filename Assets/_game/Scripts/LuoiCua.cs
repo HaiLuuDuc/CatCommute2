@@ -12,6 +12,8 @@ public class LuoiCua : MonoBehaviour
     public float moveSpeed;
     public float moveTime;
 
+    public bool isRotate = true;
+
     Coroutine rotateCoroutine = null;
     Coroutine moveCoroutine = null;
 
@@ -25,7 +27,7 @@ public class LuoiCua : MonoBehaviour
         {
             StopCoroutine(moveCoroutine);
         }
-        rotateCoroutine = StartCoroutine(RotateCoroutine());
+        if(isRotate) rotateCoroutine = StartCoroutine(RotateCoroutine());
         moveCoroutine = StartCoroutine(MoveCoroutine());
     }
 

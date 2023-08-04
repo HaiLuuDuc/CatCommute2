@@ -23,6 +23,7 @@ public class Level : MonoBehaviour
     [Header("Traps : ")]
     public LuoiCua[] luoiCuas;
     public DamageCube[] damageCubes;
+    public CongTac[] congTacs;
 
 
     public int estimatedMaxScore;
@@ -41,6 +42,7 @@ public class Level : MonoBehaviour
 
     public void CalculateMaxScore()
     {
+        return;
         // duyet qua tung couple, chon ra phuong an tot nhat
         for (int i = 0; i < tiles.Length; i += 2)
         {
@@ -91,12 +93,21 @@ public class Level : MonoBehaviour
             luoiCua.gameObject.SetActive(true);
             luoiCua.OnInit();
         }
+
         damageCubes = GetComponentsInChildren<DamageCube>(true);
         foreach (DamageCube damageCube in damageCubes)
         {
             damageCube.gameObject.SetActive(true);
             damageCube.OnInit();
         }
+
+        congTacs = GetComponentsInChildren<CongTac>(true);
+        foreach (CongTac congTac in congTacs)
+        {
+            congTac.OnInit();
+        }
+
+
 
         // boss
         boss = LevelManager.ins.currentLevel.arena.boss;

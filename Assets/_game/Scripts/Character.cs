@@ -206,7 +206,7 @@ public class Character : MathObject
                 {
                     Player.ins.GetValueFromMathObject(c);
                     Player.ins.LerpCurrentScore(0.3f);
-                    ScorePopUp.ins.Show(Player.ins.offsetScore, Color.white);
+                    ScorePopUp.ins.Show(Player.ins.offsetScore, c.scoreText.color);
                     c.SwitchState(c.runState);
                     Player.ins.characterList.Add(c);
                 }
@@ -232,7 +232,14 @@ public class Character : MathObject
                 }, 1f);
             }
 
-            
+            if (other.CompareTag("congtac") && !MovementController.ins.isBlockControl)
+            {
+                Debug.Log("congtac");
+                CongTac ct = other.GetComponentInParent<CongTac>();
+                ct.OnHit();
+            }
+
+
 
         }
 

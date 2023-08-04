@@ -26,14 +26,15 @@ public class Progress : UICanvas
     public void Btn_Continue()
     {
         if (isRunningProgress) return;
-        LevelManager.ins.LoadNextLevel();
-        UIManager.ins.CloseAll();
-        UIManager.ins.OpenUI<Home>();
         //claim
-        if(DataManager.ins.playerData.progress == 0)
+        if (DataManager.ins.playerData.progress == 0)
         {
             DataManager.ins.playerData.maxCharacterLevel += 1;
         }
+        LevelManager.ins.LoadNextLevel();
+        UIManager.ins.CloseAll();
+        UIManager.ins.OpenUI<Home>();
+        
     }
 
     public void RunProgress()

@@ -16,6 +16,7 @@ TagManager:
   - damagecube
   - wall
   - wallzone
+  - congtac
   layers:
   - Default
   - TransparentFX

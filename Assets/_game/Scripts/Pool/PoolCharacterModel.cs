@@ -59,7 +59,7 @@ public class PoolCharacterModel : Singleton<PoolCharacterModel>
             mainPool.Add(obj);
         }
     }*/
-    public void InitMainPool()
+    public void ChangeMainPool()
     {
         mainPool = dict[(ModelType)DataManager.ins.playerData.currentCharacterLevel - 1].pool;
     }
@@ -67,6 +67,24 @@ public class PoolCharacterModel : Singleton<PoolCharacterModel>
     public GameObject GetModel()
     {
         foreach (GameObject obj in mainPool)
+        {
+            if (!obj.gameObject.activeInHierarchy)
+            {
+                obj.gameObject.SetActive(true);
+                return obj;
+            }
+        }
+
+        // If we get here, all objects are in use
+        GameObject model = Instantiate(prefab);
+        mainPool.Add(model);
+        return model;
+    }
+
+    public GameObject GetRandomModel()
+    {
+        ModelType randomType = (ModelType)UnityEngine.Random.Range(0, DataManager.ins.playerData.maxCharacterLevel);
+        foreach (GameObject obj in dict[randomType].pool)
         {
             if (!obj.gameObject.activeInHierarchy)
             {
@@ -98,18 +116,21 @@ public class PoolCharacterModel : Singleton<PoolCharacterModel>
     }*/
     public void ChangePrefab()
     {
-        foreach(GameObject gameObject in mainPool)
+        /*foreach(GameObject gameObject in mainPool)
         {
             ReturnToPool(gameObject);
-        }
-        InitMainPool();
+        }*/
+        ChangeMainPool();
     }
 
     public void CollectAll()
     {
-        foreach(GameObject obj in mainPool)
+        for(int i = 0; i < dict.Count; i++)
         {
-            ReturnToPool(obj);
+            for(int j = 0; j < dict[(ModelType)i].pool.Count; j++)
+            {
+                ReturnToPool(dict[(ModelType)i].pool[j]);
+            }
         }
     }
 }

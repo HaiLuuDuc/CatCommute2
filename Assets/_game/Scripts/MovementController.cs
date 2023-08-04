@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class MovementController : Singleton<MovementController>
@@ -34,7 +35,12 @@ public class MovementController : Singleton<MovementController>
             {
                 return;
             }
+
             Vector3 newPos = moveObj.transform.position + Vector3.right * Time.smoothDeltaTime * spdSwipe * diffX;
+
+            //tránh ngã trái phải
+            if (newPos.x < LevelManager.ins.currentLevel.leftBorder.position.x - 1f || newPos.x > LevelManager.ins.currentLevel.rightBorder.position.x + 1f) return;
+
             if (Player.ins.characterRoot.isInWallZone)
             {
                 if (Player.ins.characterRoot.transform.position.x < 0 && newPos.x > 0)

@@ -67,7 +67,7 @@ public class GameManager : Singleton<GameManager>
             )
         );
         PoolCharacterModel.ins.InitAllPools();
-        PoolCharacterModel.ins.InitMainPool();
+        PoolCharacterModel.ins.ChangeMainPool();
         LevelManager.ins.OnInit();
 
         UIManager.ins.OpenUI<Loading>();
