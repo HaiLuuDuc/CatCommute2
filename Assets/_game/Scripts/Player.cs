@@ -88,6 +88,7 @@ public class Player : Singleton<Player>
                     int index = i;
                     Timer.Do(characterList[index], () =>
                     {
+                        if(index<characterList.Count)
                         characterList[index].SwitchState(characterList[index].dieState);
                     }, index * Time.deltaTime * 8);
                 }

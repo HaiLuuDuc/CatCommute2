@@ -20,7 +20,7 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         Input.multiTouchEnabled = false;
-        Application.targetFrameRate = 100;
+        Application.targetFrameRate = 60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
         int maxScreenHeight = 1280;
