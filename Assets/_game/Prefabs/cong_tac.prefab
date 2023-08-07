@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 4152788826935050733}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.19, z: 222.5}
+  m_LocalPosition: {x: 0, y: -1.3, z: 222.5}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,3 +343,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 4871616649902357824}
+  btn: {fileID: 1220992821983406674}
+  pressSpeed: 2.5
+  blueMat: {fileID: 2100000, guid: 7dc57a28a728be8448628b1d6d9d175e, type: 2}
+  greenMat: {fileID: 2100000, guid: 786f9b314f6ff744a8d1cd0013124fd5, type: 2}
+  meshRenderer: {fileID: 658500870702373886}

@@ -95,6 +95,7 @@ public class Player : Singleton<Player>
             }
 
             MovementController.ins.isBlockControl = true;
+            CameraFollow.ins.target = null;
 
             // lose UI
             Timer.Do(UIManager.ins, () =>

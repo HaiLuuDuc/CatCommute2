@@ -17,6 +17,7 @@ TagManager:
   - wall
   - wallzone
   - congtac
+  - enemytrigger
   layers:
   - Default
   - TransparentFX

@@ -48,6 +48,7 @@ public class Character : MathObject
     [HideInInspector] public Character_PatrolState patrolState = new Character_PatrolState();
     [HideInInspector] public Character_Die dieState = new Character_Die();
     [HideInInspector] public Character_Dance danceState = new Character_Dance();
+    [HideInInspector] public Character_MoveToEnemy moveToEnemyState = new Character_MoveToEnemy();
 
     public void SwitchState(Character_StateBase state)
     {
@@ -81,6 +82,7 @@ public class Character : MathObject
         isCollidingWall = false;
         isInWallZone = false;
 
+        EnableCollider();
         EnablePhysics();
 
         if (isRoot)
@@ -182,6 +184,16 @@ public class Character : MathObject
         capsuleCollider.isTrigger = true;
     }
 
+    public void EnableCollider()
+    {
+        capsuleCollider.enabled = true;
+    }
+
+    public void DisableCollider()
+    {
+        capsuleCollider.enabled = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (isRoot)
@@ -237,6 +249,25 @@ public class Character : MathObject
                 Debug.Log("congtac");
                 CongTac ct = other.GetComponentInParent<CongTac>();
                 ct.OnHit();
+            }
+
+            if (other.CompareTag("enemytrigger") && !MovementController.ins.isBlockControl)
+            {
+                Debug.Log("enemytrigger");
+                Enemies enemies = other.GetComponentInParent<Enemies>();
+                enemies.OnHit();
+                for (int i = 0; i < enemies.enemyPos.Length; i++)
+                {
+                    Debug.Log(Player.ins.characterList.Count - i - 1);
+                    Character c = Player.ins.characterList[Player.ins.characterList.Count - i - 1];
+                    c.SwitchState(c.moveToEnemyState);
+                    c.moveToEnemyState.SetTarget(enemies.enemyPos[i]);
+                }
+                for (int i = 0; i < enemies.enemyPos.Length; i++)
+                {
+                    Character c = Player.ins.characterList[Player.ins.characterList.Count - i - 1];
+                    Player.ins.characterList.Remove(c);
+                }
             }
 
 

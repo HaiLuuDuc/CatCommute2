@@ -24,6 +24,7 @@ public class Level : MonoBehaviour
     public LuoiCua[] luoiCuas;
     public DamageCube[] damageCubes;
     public CongTac[] congTacs;
+    public Enemies[] enemiess;
 
 
     public int estimatedMaxScore;
@@ -105,6 +106,12 @@ public class Level : MonoBehaviour
         foreach (CongTac congTac in congTacs)
         {
             congTac.OnInit();
+        }
+
+        enemiess = GetComponentsInChildren<Enemies>(true);
+        foreach (Enemies enemies in enemiess)
+        {
+            enemies.OnInit();
         }
 
 
