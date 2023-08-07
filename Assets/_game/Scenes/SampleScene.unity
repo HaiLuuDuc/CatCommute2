@@ -2688,6 +2688,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: level_test_separate_road
       objectReference: {fileID: 0}
+    - target: {fileID: 1296939104150293293, guid: 8c88cede0a3df1d4888d3a9318024ae3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3000054671651635400, guid: 8c88cede0a3df1d4888d3a9318024ae3, type: 3}
       propertyPath: m_Camera
       value: 

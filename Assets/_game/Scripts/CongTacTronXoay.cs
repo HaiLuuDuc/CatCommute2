@@ -10,7 +10,7 @@ public class CongTacTronXoay : CongTac
     public override void OnInit()
     {
         base.OnInit();
-        diaXoay.rotation = Quaternion.Euler(new Vector3(0, 0, 89.9f));
+        diaXoay.rotation = Quaternion.Euler(new Vector3(0, 0, 69.9f));
     }
 
     public override void OnHit()
@@ -21,8 +21,8 @@ public class CongTacTronXoay : CongTac
 
     public IEnumerator XoayCoroutine()
     {
-        float currentEulerAnglesZ = 89.9f;
-        while(currentEulerAnglesZ > -84.9f)
+        float currentEulerAnglesZ = 29.9f;
+        while(currentEulerAnglesZ > -90f)
         {
             currentEulerAnglesZ -= rotateSpeed * Time.deltaTime;
             diaXoay.rotation = Quaternion.Euler(new Vector3(0, 0, currentEulerAnglesZ));
