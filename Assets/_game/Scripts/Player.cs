@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using TMPro.Examples;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -202,5 +203,31 @@ public class Player : Singleton<Player>
             return true;
         else
             return false;
+    }
+
+    public void AttackEnemies(Enemies enemies)
+    {
+        bool isAllDie = false;
+        if(enemies.enemyPos.Length >= characterList.Count) // character chet het
+        {
+            isAllDie = true;
+        }
+        if(isAllDie)
+        {
+            CameraFollow.ins.target = null;
+            MovementController.ins.isBlockControl = true;
+            Timer.Do(this, () =>
+            {
+                currentScore = targetScore = 0;
+            }, 0.5f);
+        }
+
+        for (int i = 0; i < enemies.enemyPos.Length; i++)
+        {
+            if (characterList.Count - i - 1 < 0) break;
+            Character c = characterList[characterList.Count - i - 1];
+            c.moveToEnemyState.SetTarget(enemies.enemyPos[i]);
+            c.SwitchState(c.moveToEnemyState);
+        }
     }
 }

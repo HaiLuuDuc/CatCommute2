@@ -48,10 +48,8 @@ public class LevelManager : Singleton<LevelManager>
         PoolCharacterModel.ins.CollectAll();
         Player.ins.OnStartNewLevel();
         currentLevel.SetUpMap(); // khởi tạo mảng patrolCharacters
-     
         UpgradeManager.ins.ChangeCharacterRootModel(DataManager.ins.playerData.currentCharacterLevel);
         UpgradeManager.ins.ChangePatrolCharacterModels(DataManager.ins.playerData.currentCharacterLevel);
-      
         // characters OnInit
         Player.ins.characterRoot.OnInit(UpgradeManager.ins.characterRootModel);
         for (int i = 0; i < currentLevel.patrolCharacters.Length; i++)

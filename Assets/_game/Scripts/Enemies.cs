@@ -9,6 +9,10 @@ public class Enemies : MonoBehaviour
 
     public void OnInit()
     {
+        foreach(Transform enemy in enemyPos)
+        {
+            enemy.gameObject.SetActive(true);
+        }
         boxCollider.gameObject.SetActive(true);
     }
 

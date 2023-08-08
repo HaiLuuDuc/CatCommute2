@@ -18,6 +18,11 @@ TagManager:
   - wallzone
   - congtac
   - enemytrigger
+  - tangtoc
+  - thuocno
+  - loxo
+  - chong
+  - tnt
   layers:
   - Default
   - TransparentFX

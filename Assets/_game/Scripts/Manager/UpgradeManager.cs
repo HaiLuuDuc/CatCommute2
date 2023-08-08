@@ -134,7 +134,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
     public void ChangePatrolCharacterModels(int characterLevel) // đang được gọi ở loadlevel mới và upgrade thành công
     {
         patrolModelList.Clear();
-
+        Debug.Log(nameof(ChangePatrolCharacterModels));
         // spawn new model
         foreach (Character character in LevelManager.ins.currentLevel.patrolCharacters)
         {

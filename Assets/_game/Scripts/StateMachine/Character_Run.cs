@@ -18,7 +18,7 @@ public class Character_Run : Character_StateBase
             c.scoreText.text = "";
 
             c.DisablePhysics();
-            Timer.Do(c, () => c.EnablePhysics(), 1f);
+            Timer.Do(c, () => c.EnablePhysics(), .5f);
         }
         c.ChangeAnim("idle");
         c.ChangeAnim("run");

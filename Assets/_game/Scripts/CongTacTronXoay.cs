@@ -15,6 +15,7 @@ public class CongTacTronXoay : CongTac
 
     public override void OnHit()
     {
+        if (isHit) return;
         base.OnHit();
         StartCoroutine(XoayCoroutine());
     }

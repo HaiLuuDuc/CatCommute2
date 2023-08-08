@@ -18,6 +18,7 @@ public class CongTacDuongCut : CongTac
 
     public override void OnHit()
     {
+        if (isHit) return;
         base.OnHit();
         ShowGround();
         StartCoroutine(PressCoroutine());

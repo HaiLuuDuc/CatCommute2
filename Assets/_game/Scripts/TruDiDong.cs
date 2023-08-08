@@ -4,13 +4,15 @@ using UnityEngine;
 using DG.Tweening;
 using Unity.Collections.LowLevel.Unsafe;
 
-public class LuoiCua : MonoBehaviour
+public class TruDiDong : MonoBehaviour
 {
     public Transform left;
     public Transform right;
     public float rotateSpeed;
     public float moveSpeed;
     public float moveTime;
+
+    public bool isMoveRight = true;
 
     public bool isRotate = true;
 
@@ -41,7 +43,9 @@ public class LuoiCua : MonoBehaviour
     }
     public IEnumerator MoveCoroutine( )
     {
-        Vector3 targetMove = right.transform.position;
+        Vector3 targetMove;
+        if (isMoveRight) targetMove = right.transform.position;
+        else targetMove = left.transform.position;
         targetMove.y = this.transform.position.y;
         while (Vector3.Distance(this.transform.position, targetMove) > 0.01f)
         {
@@ -57,7 +61,9 @@ public class LuoiCua : MonoBehaviour
 
     public void MoveAround()
     {
-        this.transform
+        if(isMoveRight)
+        {
+            this.transform
             .DOMoveX(left.transform.position.x, moveTime)
             .SetEase(Ease.InOutSine)
             .OnComplete(() =>
@@ -70,6 +76,24 @@ public class LuoiCua : MonoBehaviour
                         MoveAround();
                     });
             });
+        }
+        else
+        {
+            this.transform
+            .DOMoveX(right.transform.position.x, moveTime)
+            .SetEase(Ease.InOutSine)
+            .OnComplete(() =>
+            {
+                this.transform
+                    .DOMoveX(left.transform.position.x, moveTime)
+                    .SetEase(Ease.InOutSine)
+                    .OnComplete(() =>
+                    {
+                        MoveAround();
+                    });
+            });
+        }
+        
     }
 
 

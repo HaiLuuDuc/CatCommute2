@@ -96,6 +96,7 @@ public class Character : MathObject
         }
 
         this.model = model;
+        this.model.gameObject.SetActive(true);
 
     }
 
@@ -256,21 +257,23 @@ public class Character : MathObject
                 Debug.Log("enemytrigger");
                 Enemies enemies = other.GetComponentInParent<Enemies>();
                 enemies.OnHit();
-                for (int i = 0; i < enemies.enemyPos.Length; i++)
-                {
-                    Debug.Log(Player.ins.characterList.Count - i - 1);
-                    Character c = Player.ins.characterList[Player.ins.characterList.Count - i - 1];
-                    c.SwitchState(c.moveToEnemyState);
-                    c.moveToEnemyState.SetTarget(enemies.enemyPos[i]);
-                }
-                for (int i = 0; i < enemies.enemyPos.Length; i++)
-                {
-                    Character c = Player.ins.characterList[Player.ins.characterList.Count - i - 1];
-                    Player.ins.characterList.Remove(c);
-                }
+                Player.ins.AttackEnemies(enemies);
             }
 
+            if (other.CompareTag("tangtoc") && !MovementController.ins.isBlockControl)
+            {
+                Debug.Log("tangtoc");
+                Player.ins.runSpeed *= 1.1f;
+            }
 
+            if (other.CompareTag("tnt") && !MovementController.ins.isBlockControl)
+            {
+                Debug.Log("tnt");
+                ThuocNo thuocNo = other.GetComponentInParent<ThuocNo>();
+                thuocNo.OnHit();
+                Player.ins.targetScore = Player.ins.currentScore = 0;
+                PoolCharacterModel.ins.ReturnToPool(UpgradeManager.ins.characterRootModel);
+            }
 
         }
 
@@ -320,8 +323,6 @@ public class Character : MathObject
 
                 Player.ins.characterList.Remove(this);
                 this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
-                /*PoolCharacterModel.ins.ReturnToPool(this.model);
-                this.gameObject.SetActive(false);*/
                 this.SwitchState(dieState);
             }
         }
@@ -329,6 +330,24 @@ public class Character : MathObject
         if (other.CompareTag("wallzone"))
         {
             isInWallZone = true;
+        }
+
+        if (other.CompareTag("loxo") && isJump == false)
+        {
+            LoXo loxo = other.GetComponentInParent<LoXo>();
+            loxo.OnHit();
+            rb.velocity = Vector3.zero;
+            rb.AddForce(new Vector3(0, jumpForce, 0));
+            isJump = true;
+        }
+
+        if (!isRoot)
+        {
+            if (other.CompareTag("thuocno"))
+            {
+                ThuocNo thuocNo = other.GetComponentInParent<ThuocNo>();
+                thuocNo.OnCharacterEnter(this);
+            }
         }
 
     }
@@ -343,6 +362,27 @@ public class Character : MathObject
         if (other.CompareTag("wallzone"))
         {
             isInWallZone = false;
+        }
+
+        if (!isRoot)
+        {
+            if (other.CompareTag("thuocno"))
+            {
+                ThuocNo thuocNo = other.GetComponentInParent<ThuocNo>();
+                thuocNo.OnCharacterExit(this);
+            }
+        }
+
+        if(isRoot)
+        if (other.CompareTag("thuocno"))
+        {
+            ThuocNo thuocNo = other.GetComponentInParent<ThuocNo>();
+            thuocNo.OnHit();
+        }
+
+        if (other.CompareTag("loxo"))
+        {
+            isJump = false;
         }
     }
 
@@ -359,16 +399,27 @@ public class Character : MathObject
             damageCube.isCollisionWithCharacter = true;
         }
 
-       
-            if (collision.gameObject.tag == "wall")
+
+        if (collision.gameObject.tag == "wall")
+        {
+            isCollidingWall = true;
+            if (collision.contacts.Length > 0)
             {
-                isCollidingWall = true;
-                if (collision.contacts.Length > 0)
-                {
-                    wallContactPoint = collision.contacts[0].point;
-                }
+                wallContactPoint = collision.contacts[0].point;
             }
-        
+        }
+
+        if (collision.gameObject.tag == "chong")
+        {
+            this.SwitchState(dieState);
+            if (!isRoot)
+            {
+                Player.ins.characterList.Remove(this);
+                this.transform.SetParent(LevelManager.ins.currentLevel.patrolParent);
+            }
+            
+        }
+
     }
     private void OnCollisionStay(Collision collision)
     {

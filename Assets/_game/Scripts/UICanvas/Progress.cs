@@ -29,6 +29,7 @@ public class Progress : UICanvas
         //claim
         if (DataManager.ins.playerData.progress == 0)
         {
+            if(DataManager.ins.playerData.maxCharacterLevel < 9)
             DataManager.ins.playerData.maxCharacterLevel += 1;
         }
         LevelManager.ins.LoadNextLevel();

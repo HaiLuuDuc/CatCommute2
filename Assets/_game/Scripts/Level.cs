@@ -21,10 +21,11 @@ public class Level : MonoBehaviour
     public Boss boss;
 
     [Header("Traps : ")]
-    public LuoiCua[] luoiCuas;
+    public TruDiDong[] truDiDongs;
     public DamageCube[] damageCubes;
     public CongTac[] congTacs;
     public Enemies[] enemiess;
+    public ThuocNo[] thuocNos;
 
 
     public int estimatedMaxScore;
@@ -89,10 +90,10 @@ public class Level : MonoBehaviour
         CalculateMaxScore(); // tính toán sau khi đã setup value của tiles và patrol characters
 
         // traps
-        luoiCuas = GetComponentsInChildren<LuoiCua>();
-        foreach (LuoiCua luoiCua in luoiCuas) {
-            luoiCua.gameObject.SetActive(true);
-            luoiCua.OnInit();
+        truDiDongs = GetComponentsInChildren<TruDiDong>();
+        foreach (TruDiDong truDiDong in truDiDongs) {
+            truDiDong.gameObject.SetActive(true);
+            truDiDong.OnInit();
         }
 
         damageCubes = GetComponentsInChildren<DamageCube>(true);
@@ -112,6 +113,12 @@ public class Level : MonoBehaviour
         foreach (Enemies enemies in enemiess)
         {
             enemies.OnInit();
+        }
+
+        thuocNos = GetComponentsInChildren<ThuocNo>(true);
+        foreach (ThuocNo thuocNo in thuocNos)
+        {
+            thuocNo.OnInit();
         }
 
 
