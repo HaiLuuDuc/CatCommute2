@@ -42,6 +42,7 @@ public class Player : Singleton<Player>
     {
         //set target run (ở cuối đường)
         targetRun = LevelManager.ins.currentLevel.targetRun;
+        targetRun = LevelManager.ins.currentLevel.boss.transform;
         runSpeed = initialRunSpeed;
         //set vị trí ban đầu
         this.transform.position = new Vector3(0, 0, 170f);

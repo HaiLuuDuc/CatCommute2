@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JetBrains.Annotations;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -13,8 +14,9 @@ public class Level : MonoBehaviour
 
     [Header("Patrol Characters : ")]
     public Character[] patrolCharacters;
-    public Transform[] initialPos;
+    public Vector3[] initialPos;
     public Transform patrolParent;
+    public bool isInitInitialPos = false;
 
     [Header("Arena : ")]
     public Arena arena;
@@ -26,9 +28,21 @@ public class Level : MonoBehaviour
     public CongTac[] congTacs;
     public Enemies[] enemiess;
     public ThuocNo[] thuocNos;
+    public RaoChan[] raoChans;
 
 
     public int estimatedMaxScore;
+
+    public void InitInitialPosForPatrolCharacters()
+    {
+        if (isInitInitialPos) return;
+        initialPos = new Vector3[patrolCharacters.Length];
+        for (int i = 0; i < patrolCharacters.Length; i++)
+        {
+            initialPos[i] = patrolCharacters[i].transform.position;
+        }
+        isInitInitialPos = true;
+    }
 
     private void Update()
     {
@@ -78,13 +92,15 @@ public class Level : MonoBehaviour
             tile.OnInit();
         }
 
+
         // patrol characters
         patrolCharacters = GetComponentsInChildren<Character>(true);
+        InitInitialPosForPatrolCharacters();
         for (int i = 0; i < patrolCharacters.Length; i++)
         {
             Character patrolCharacter = patrolCharacters[i];
             patrolCharacter.gameObject.SetActive(true);
-            patrolCharacter.transform.position = initialPos[i].position;
+            patrolCharacter.transform.position = initialPos[i];
         }
 
         CalculateMaxScore(); // tính toán sau khi đã setup value của tiles và patrol characters
@@ -119,6 +135,12 @@ public class Level : MonoBehaviour
         foreach (ThuocNo thuocNo in thuocNos)
         {
             thuocNo.OnInit();
+        }
+
+        raoChans = GetComponentsInChildren<RaoChan>(true);
+        foreach (RaoChan raoChan in raoChans)
+        {
+            raoChan.OnInit();
         }
 
 
